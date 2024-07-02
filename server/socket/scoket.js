@@ -1,6 +1,6 @@
 const { Server } = require("socket.io");
 
-const io = new Server({ cors: "http://localhost:5173/" });
+const io = new Server({ cors: "http://localhost:5000/" });
 let onlineUsers = [];
 io.on("connection", (socket) => {
   console.log("New Connection", socket.id);
@@ -11,7 +11,7 @@ io.on("connection", (socket) => {
         userId,
         socketId: socket.id,
       });
-    console.log("onlineUser", onlineUsers);
+    // console.log("onlineUser", onlineUsers);
 
     io.emit("getOnlineUsers", onlineUsers);
   });
@@ -38,4 +38,4 @@ io.on("connection", (socket) => {
   });
 });
 
-io.listen(3000);
+io.listen(5000);

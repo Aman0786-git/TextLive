@@ -17,6 +17,7 @@
     "react-dom": "^18.3.1",
     "react-input-emoji": "^5.9.0",
     "react-router-dom": "^6.23.1",
+    "server": "file:..",
     "socket.io": "^4.7.5",
     "socket.io-client": "^4.7.5"
   },

@@ -25,6 +25,7 @@ export const ChatContextProvider = ({ children, user }) => {
 
   useEffect(() => {
     const newSocket = io("https://textlive.onrender.com/");
+
     setSocket(newSocket);
 
     return () => {
@@ -244,7 +245,7 @@ export const ChatContextProvider = ({ children, user }) => {
           if (n.senderId === el.senderId) {
             notification = {
               ...n,
-              isRead: ture,
+              isRead: true,
             };
           } else {
             notification = el;

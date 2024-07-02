@@ -1,6 +1,6 @@
 const { Server } = require("socket.io");
 
-const io = new Server({ cors: "http://localhost:5000/" });
+const io = new Server({ cors: "https://textlive.onrender.com/" });
 let onlineUsers = [];
 io.on("connection", (socket) => {
   console.log("New Connection", socket.id);

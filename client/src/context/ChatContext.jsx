@@ -21,7 +21,7 @@ export const ChatContextProvider = ({ children, user }) => {
   const [allUsers, setAllUsers] = useState([]);
 
   // console.log("Messages", messages);
-  console.log("Notification", notifications);
+  // console.log("Notification", notifications);
 
   useEffect(() => {
     const newSocket = io("https://textlive.onrender.com/");
